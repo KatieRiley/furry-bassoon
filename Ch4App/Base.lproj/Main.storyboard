@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,10 +21,43 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ga5-W7-jc6">
                                 <rect key="frame" x="214" y="28" width="172" height="80"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRr-6j-YhU">
+                                <rect key="frame" x="165" y="248" width="409" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYt-jY-UoR">
+                                <rect key="frame" x="62" y="200" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3li-Je-7mx">
+                                <rect key="frame" x="62" y="252" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpi-qa-Exq">
+                                <rect key="frame" x="165" y="196" width="409" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xpi-qa-Exq" firstAttribute="top" secondItem="ga5-W7-jc6" secondAttribute="bottom" constant="88" id="0JW-qQ-4Sm"/>
+                            <constraint firstItem="TRr-6j-YhU" firstAttribute="leading" secondItem="3li-Je-7mx" secondAttribute="trailing" constant="36" id="1h2-bP-PQP"/>
+                            <constraint firstItem="bYt-jY-UoR" firstAttribute="leading" secondItem="3li-Je-7mx" secondAttribute="leading" id="3Mw-l4-hqz"/>
+                            <constraint firstItem="3li-Je-7mx" firstAttribute="centerY" secondItem="TRr-6j-YhU" secondAttribute="centerY" id="5tn-4B-cFz"/>
+                            <constraint firstItem="bYt-jY-UoR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="95P-Sb-ZeM"/>
                             <constraint firstItem="ga5-W7-jc6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F5S-g5-iRr"/>
+                            <constraint firstItem="xpi-qa-Exq" firstAttribute="trailing" secondItem="TRr-6j-YhU" secondAttribute="trailing" id="WiK-rO-9BN"/>
+                            <constraint firstItem="3li-Je-7mx" firstAttribute="width" secondItem="bYt-jY-UoR" secondAttribute="width" id="WwA-H7-yfo"/>
+                            <constraint firstItem="xpi-qa-Exq" firstAttribute="leading" secondItem="TRr-6j-YhU" secondAttribute="leading" id="tsN-aK-W4b"/>
+                            <constraint firstItem="bYt-jY-UoR" firstAttribute="centerY" secondItem="xpi-qa-Exq" secondAttribute="centerY" id="txd-JJ-nVS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xpi-qa-Exq" secondAttribute="trailing" constant="6" id="ufJ-Wq-b4M"/>
+                            <constraint firstItem="TRr-6j-YhU" firstAttribute="top" secondItem="xpi-qa-Exq" secondAttribute="bottom" constant="22" id="vr0-Ad-dsd"/>
                             <constraint firstItem="ga5-W7-jc6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yHS-25-EiA"/>
                         </constraints>
                     </view>
