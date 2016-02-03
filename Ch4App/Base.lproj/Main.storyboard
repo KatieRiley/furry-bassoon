@@ -42,9 +42,13 @@
                                 <rect key="frame" x="165" y="196" width="409" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="25u-jC-KSs"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="xpi-qa-Exq" firstAttribute="top" secondItem="ga5-W7-jc6" secondAttribute="bottom" constant="88" id="0JW-qQ-4Sm"/>
                             <constraint firstItem="TRr-6j-YhU" firstAttribute="leading" secondItem="3li-Je-7mx" secondAttribute="trailing" constant="36" id="1h2-bP-PQP"/>
@@ -60,9 +64,21 @@
                             <constraint firstItem="TRr-6j-YhU" firstAttribute="top" secondItem="xpi-qa-Exq" secondAttribute="bottom" constant="22" id="vr0-Ad-dsd"/>
                             <constraint firstItem="ga5-W7-jc6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yHS-25-EiA"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KrV-nW-MCW" appends="YES" id="WgJ-up-TdF"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="myNameTextField" destination="xpi-qa-Exq" id="fS9-xF-tee"/>
+                        <outlet property="myNumberTextField" destination="TRr-6j-YhU" id="o9w-HC-tvf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KrV-nW-MCW">
+                    <connections>
+                        <action selector="doTapGesture:" destination="BYZ-38-t0r" id="W2v-55-YGM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="391" y="418"/>
         </scene>
